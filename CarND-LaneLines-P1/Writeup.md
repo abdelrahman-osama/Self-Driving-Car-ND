@@ -31,7 +31,7 @@ The goals / steps of this project are the following:
 
 ## How I modified the draw_lines():
 My goal was to draw only two lines, one line on each lane.
-Basically, I initialized 4 arrays: `  left_line_x,  left_line_y = [], []right_line_x, right_line_y = [], []` to store the x and y points in every iteration based on where it belongs. If the slope of the points is negative then it belongs to the left lane. Otherwise, it belongs to the right lane. After finishing this I ended up with 4 arrays with the data of all the x and y values for each of the two lane lines. My goal at this step was to average the points on each lane to make out only 2 coordinates that can be used to draw a line. I used `np.polyfit()` to do this job for me. I just entered by x and y arrays for each line and a degree of 1 and I got an output as a slope and a y-intercept (c). At the end, I used these data to draw my lines.
+Basically, I initialized 4 arrays: `  left_line_x,  left_line_y, right_line_x, right_line_y` to store the x and y points in every iteration based on where it belongs. If the slope of the points is negative then it belongs to the left lane. Otherwise, it belongs to the right lane. After finishing this I ended up with 4 arrays with the data of all the x and y values for each of the two lane lines. My goal at this step was to average the points on each lane to make out only 2 coordinates that can be used to draw a line. I used `np.polyfit()` to do this job for me. I just entered by x and y arrays for each line and a degree of 1 and I got an output as a slope and a y-intercept (c). At the end, I used these data to draw my lines.
 
 
 ### 2. Identify potential shortcomings with your current pipeline
